@@ -1,4 +1,4 @@
-﻿CREATE DATABASE PRN212_ManageStudents
+CREATE DATABASE PRN212_ManageStudents
 GO
 
 USE PRN212_ManageStudents
@@ -190,6 +190,7 @@ INSERT INTO [dbo].[Admin]([ID] ,[Name] ,[Gender] ,[Email] ,[phone] ,[BirthDay] ,
 ('admin4', N'Lê Tấn Đại', 'Male', 'Dai@gmail.com', '0944444444', '2004-09-27', 'abc@123'),
 ('admin5', N'Huỳnh Trần Văn Trọng', 'Male', 'Trong@gmail.com', '0955555555', '2004-09-27', 'abc@123');
 GO
+
 -- Insert table Student
 INSERT INTO [dbo].[Student]([IDStudent], [Name], [Gender], [Email], [Phone], [BirthDay], [PassWord], [isActive]) VALUES
 ('1', N'Huỳnh Trần Văn Trọng', 'Male', 'trong15gg@gmail.com', '0702795560', '2004-07-21', 'abc@123', 'Y'),
@@ -266,6 +267,25 @@ INSERT INTO [dbo].[Mark]([Semester], [ProgressTest1], [ProgressTest2], [Lab1], [
     ('Fall', 8.5, 9.0, 8.0, 9.5, 9.0, 8.5, 8.0, 8.8, '4', 'SWR302', 'SE18B02', '2021-2022'),
     ('Spring', 8.5, 9.0, 8.0, 9.5, 9.0, 8.5, 8.0, 8.8, '5', 'SWT301', 'SE18B02', '2021-2022');
 
+-- Insert data into the Class table
+INSERT INTO [dbo].[Class] (nameClass, schoolYear, IDTeacher)
+VALUES 
+('SE18B01', '2021-2022', 'GV001'),
+('SE18B02', '2021-2022', 'GV002'),
+('SE18B03', '2021-2022', 'GV003'),
+('SE18B04', '2021-2022', 'GV004'),
+
+
+('SE18B06', '2022-2023', 'GV005'),
+('SE18B07', '2022-2023', 'GV006'),
+('SE18B08', '2022-2023', 'GV007'),
+
+('SE18B10', '2023-2024', 'GV008'),
+('SE18B11', '2023-2024', 'GV009'),
+('SE18B12', '2023-2024', 'GV010'),
+('SE18B13', '2023-2024', 'GV011'),
+
+GO
 -- Insert table Assign
 
 INSERT [dbo].[Assign] ([IDTeacher], [IDSubject], [nameClass], [schoolYear]) VALUES (N'GV001', N'ENT503', N'SE18B01', N'2021-2022')
